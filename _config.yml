@@ -1,0 +1,15 @@
+title: Wei Shao
+description: Wei Shao — Data Mining, Data Governance, Time Series, and LLM Pre-training Data.
+author: Wei Shao
+email: wei.shao@zju.edu.cn
+lang: en
+url: ""
+baseurl: ""
+markdown: kramdown
+permalink: pretty
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - .bundle/

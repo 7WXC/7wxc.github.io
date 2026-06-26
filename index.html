@@ -1,0 +1,130 @@
+---
+layout: default
+lang: en
+en_url: /
+zh_url: /zh/
+---
+{% assign profile = site.data.profile %}
+<main class="min-h-screen pt-16 lg:pt-20">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 bg-background min-h-screen">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+      <div class="lg:col-span-1 profile-sidebar-column">
+        <div class="profile-sidebar">
+          <div class="w-64 h-64 mx-auto mb-6 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-105 profile-photo-wrap"><img class="profile-photo" src="{{ '/assets/img/me.webp' | relative_url }}" alt="{{ profile.name }}" width="640" height="640" decoding="async"></div>
+          <div class="text-center mb-6">
+            <h1 class="text-3xl font-serif font-bold text-primary mb-2">{{ profile.name }}</h1>
+            <p class="text-lg text-accent font-medium mb-1">{{ profile.role }}</p>
+            <p class="text-neutral-600 mb-2">{{ profile.institution }}</p>
+          </div>
+          <div class="profile-social-row mb-6">
+            <div class="email-wrap profile-icon-shell">
+              <a href="mailto:{{ profile.email }}" class="profile-icon-button text-neutral-600 dark:text-neutral-400 hover:text-accent" aria-label="Email">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-5 w-5"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/></svg>
+              </a><span class="email-popover">{{ profile.email }}</span>
+            </div>
+            <a href="https://github.com/7WXC" target="_blank" rel="noopener noreferrer" class="profile-icon-button text-neutral-600 dark:text-neutral-400 hover:text-accent" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5" xmlns="http://www.w3.org/2000/svg"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+            </a>
+            <a href="{{ profile.cv | relative_url }}" class="profile-icon-button text-neutral-600 dark:text-neutral-400 hover:text-accent" aria-label="CV">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-5 w-5"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 2.25H6A2.25 2.25 0 0 0 3.75 4.5v15A2.25 2.25 0 0 0 6 21.75h12A2.25 2.25 0 0 0 20.25 19.5V6.75L15.75 2.25Z"/><path stroke-linecap="round" stroke-linejoin="round" d="M14.25 2.25v4.5h4.5M8.25 12h7.5M8.25 15.75h7.5"/></svg>
+            </a>
+          </div>
+          <div class="w-64 mx-auto bg-neutral-100 dark:bg-neutral-800 rounded-lg p-4 mb-6 hover:shadow-lg transition-all duration-200 hover:scale-[1.02]">
+            <div class="mb-3"><h3 class="text-sm font-semibold text-primary leading-tight">Research Interests</h3></div>
+            <div class="space-y-2 text-sm text-neutral-700 dark:text-neutral-500">{% for item in profile.interests %}<div>{{ item }}</div>{% endfor %}</div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="lg:col-span-2 space-y-8">
+        <section id="about" class="scroll-mt-24 space-y-8">
+          <section class="reveal">
+            <h2 class="text-2xl font-serif font-bold text-primary mb-4">About</h2>
+            <div class="text-neutral-700 dark:text-neutral-600 leading-relaxed">
+              <p class="mb-4 last:mb-0">Hi! I am <strong>Wei Shao</strong>, a master's student at <a href="https://www.zju.edu.cn/english/" target="_blank" rel="noopener noreferrer" class="text-accent font-medium rounded hover:bg-accent/10 hover:shadow-sm">Zhejiang University</a>, advised by <a href="https://person.zju.edu.cn/fangziquan" target="_blank" rel="noopener noreferrer" class="text-accent font-medium rounded hover:bg-accent/10 hover:shadow-sm"><strong>Dr. Ziquan Fang</strong></a> and <a href="https://person.zju.edu.cn/gaoyj_cn" target="_blank" rel="noopener noreferrer" class="text-accent font-medium rounded hover:bg-accent/10 hover:shadow-sm"><strong>Prof. Yunjun Gao</strong></a>.</p>
+              <p class="mb-4 last:mb-0">My research focuses on <strong>Data-Centric AI</strong> at the intersection of <strong>data mining</strong> and <strong>data governance</strong>. I am particularly interested in LLM pre-training data, trajectory intelligence, multivariate time-series cleaning, and dataset condensation.</p>
+              <p class="mb-4 last:mb-0">I have published papers at leading venues including <strong>ICML</strong>, <strong>SIGMOD</strong>, <strong>ICLR</strong>, and <strong>KDD</strong>, and received the SIGMOD Student Travel Grant and KDD Student Travel Award. Beyond research, I have gained industry experience at <strong>Ubiquant Investment</strong> and <strong>Bosch</strong>.</p>
+              <p class="mb-4 last:mb-0">I expect to graduate in June 2027 and am actively seeking full-time opportunities.</p>
+            </div>
+          </section>
+
+          <section class="reveal">
+            <h2 class="text-2xl font-serif font-bold text-primary mb-4">News</h2>
+            <div class="space-y-3 collapsible-list" data-collapsible data-initial="5">
+              {% for item in site.data.news %}<div class="collapsible-item{% if forloop.index0 >= 5 %} is-collapsed{% endif %}{% if item.template %} template-item{% endif %} flex items-start space-x-3"><span class="text-xs text-neutral-500 mt-1 w-16 flex-shrink-0">{{ item.date }}</span><p class="text-sm text-neutral-700">{{ item.text }}</p></div>{% endfor %}
+            </div>
+            <button class="show-more-toggle mt-4" type="button" data-toggle-collapsible data-more="Show more news" data-less="Show less news">Show more news</button>
+          </section>
+
+          <section id="publications" class="reveal">
+            <div class="flex items-center justify-between mb-4"><h2 class="text-2xl font-serif font-bold text-primary">Featured Publications</h2><a href="{{ '/publications/' | relative_url }}" class="show-more-toggle">View All →</a></div>
+            <div class="space-y-4">
+              {% assign publication_count = 0 %}
+              {% for pub in site.data.publications.main %}
+              {% if pub.homepage and publication_count < 3 %}
+              <div class="publication-summary-card bg-neutral-50 dark:bg-neutral-800 p-4 rounded-lg shadow-sm border border-neutral-200 dark:border-[rgba(148,163,184,0.24)] hover:shadow-lg transition-all duration-200 hover:scale-[1.02]">
+                <div class="flex items-start justify-between gap-2"><h3 class="font-semibold text-primary mb-2 leading-tight">{% if pub.paper %}<a href="{{ pub.paper }}" target="_blank" rel="noopener">{{ pub.title }}</a>{% else %}{{ pub.title }}{% endif %}</h3><span class="text-xs text-accent font-semibold whitespace-nowrap">{{ pub.venue }}</span></div>
+                <p class="text-sm text-neutral-600 dark:text-neutral-500 mb-1">{{ pub.authors }}</p>
+                <p class="text-sm text-neutral-600 dark:text-neutral-500 mb-2">{{ pub.venue_full }}</p>
+                <div class="keyword-tags">{% for keyword in pub.keywords %}<span>{{ keyword }}</span>{% endfor %}</div>
+                <div class="publication-links">
+                  {% if pub.paper %}<a href="{{ pub.paper }}" target="_blank" rel="noopener">Paper</a>{% endif %}
+                  {% if pub.pdf %}<a href="{{ pub.pdf }}" target="_blank" rel="noopener">PDF</a>{% endif %}
+                  {% if pub.code %}<a href="{{ pub.code }}" target="_blank" rel="noopener">Code</a>{% endif %}
+                  {% if pub.dblp %}<a href="{{ pub.dblp }}" target="_blank" rel="noopener">DBLP</a>{% endif %}
+                </div>
+              </div>
+              {% assign publication_count = publication_count | plus: 1 %}
+              {% endif %}
+              {% endfor %}
+            </div>
+            <p class="text-xs text-neutral-500 mt-2">* Corresponding author.</p>
+          </section>
+
+          <section id="experience" class="reveal">
+            <h2 class="text-2xl font-serif font-bold text-primary mb-4">Industry Experience</h2>
+            <div class="grid gap-4">
+              <div class="bg-neutral-50 dark:bg-neutral-800 p-4 rounded-lg shadow-sm border border-neutral-200 dark:border-[rgba(148,163,184,0.24)] hover:shadow-lg transition-all duration-200 hover:scale-[1.02]">
+                <div class="flex justify-between items-start gap-3"><div><h3 class="font-semibold text-primary leading-tight">Ubiquant Investment · IQuest Lab</h3><p class="text-sm text-accent font-medium mt-1">LLM Pre-training Data Algorithm Intern</p></div><span class="text-xs text-neutral-500 whitespace-nowrap">2026-04 — Present</span></div>
+              </div>
+              <div class="bg-neutral-50 dark:bg-neutral-800 p-4 rounded-lg shadow-sm border border-neutral-200 dark:border-[rgba(148,163,184,0.24)] hover:shadow-lg transition-all duration-200 hover:scale-[1.02]">
+                <div class="flex justify-between items-start gap-3"><div><h3 class="font-semibold text-primary leading-tight">Bosch · ETAS Team</h3><p class="text-sm text-accent font-medium mt-1">Strategy Intern (Embedded AI)</p></div><span class="text-xs text-neutral-500 whitespace-nowrap">2024-01 — 2024-06</span></div>
+              </div>
+            </div>
+          </section>
+
+
+
+          <section id="awards" class="reveal">
+            <h2 class="text-2xl font-serif font-bold text-primary mb-4">Awards</h2>
+            <div class="grid gap-4">
+              <div class="bg-white dark:bg-neutral-900 p-4 rounded-xl shadow-sm border border-neutral-200 dark:border-neutral-800 hover:shadow-lg transition-all duration-200 hover:scale-[1.01]">
+                <div class="flex justify-between items-start mb-3"><h3 class="text-lg font-semibold text-primary">Academic Honors</h3><span class="text-sm text-neutral-500 font-medium bg-neutral-100 dark:bg-neutral-800 px-2 py-1 rounded">Honors</span></div>
+                <div class="honor-list text-sm text-neutral-600 dark:text-neutral-500">
+                  <div><span class="honor-date">2026</span><span>SIGMOD Student Travel Grant</span></div>
+                  <div><span class="honor-date">2025</span><span><strong class="font-semibold text-primary">National Scholarship, Zhejiang University</strong></span></div>
+                  <div><span class="honor-date">2025</span><span>KDD Student Travel Award</span></div>
+                  <div><span class="honor-date">2024</span><span>Outstanding Graduate, Donghua University</span></div>
+                </div>
+              </div>
+
+            </div>
+          </section>
+
+          <section id="services" class="reveal">
+            <h2 class="text-2xl font-serif font-bold text-primary mb-4">Services</h2>
+            <div class="bg-neutral-50 dark:bg-neutral-800 p-4 rounded-lg shadow-sm border border-neutral-200 dark:border-[rgba(148,163,184,0.24)]">
+              <h3 class="font-semibold text-primary mb-3">Conference Reviewer</h3>
+              <div class="service-badges text-sm">
+                <span>ICLR 26</span>
+                <span>KDD 26</span>
+                <span>WWW 26</span>
+              </div>
+            </div>
+          </section>
+        </section>
+      </div>
+    </div>
+  </div>
+</main>

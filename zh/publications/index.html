@@ -1,0 +1,50 @@
+---
+layout: default
+title: 论文发表
+nav_active: publications
+lang: zh-CN
+en_url: /publications/
+zh_url: /zh/publications/
+---
+<main class="min-h-screen pt-16 lg:pt-20">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <header class="mb-8 reveal">
+      <h1 class="text-3xl font-serif font-bold text-primary mb-2">论文发表</h1>
+    </header>
+
+    <section class="reveal">
+      <div class="space-y-6">
+        {% for pub in site.data.publications.main %}
+        <article class="publication-detail-card bg-white dark:bg-neutral-900 p-4 md:p-8 rounded-xl shadow-sm border border-neutral-200 dark:border-neutral-800 hover:shadow-lg transition-all duration-200{% if pub.template %} template-item{% endif %}">
+          <div class="publication-detail-body">
+            <div class="publication-meta-tags mb-3">
+              {% for tag in pub.tags_zh %}<span class="publication-meta-tag">{{ tag }}</span>{% endfor %}
+              <span class="publication-meta-tag">{{ pub.type_zh }}</span>
+            </div>
+            <h2 class="text-xl font-serif font-bold text-primary mb-2 leading-tight">{% if pub.paper %}<a href="{{ pub.paper }}" target="_blank" rel="noopener">{{ pub.title }}</a>{% else %}{{ pub.title }}{% endif %}</h2>
+            <p class="text-sm text-neutral-600 dark:text-neutral-500 mb-1">{{ pub.authors }}</p>
+            <p class="text-sm text-neutral-600 dark:text-neutral-500 mb-3"><strong>{{ pub.venue }}</strong> · {{ pub.venue_full_zh }}</p>
+            <div class="keyword-tags">{% for keyword in pub.keywords_zh %}<span>{{ keyword }}</span>{% endfor %}</div>
+            {% unless pub.template %}<div class="publication-links">
+              {% if pub.paper %}<a href="{{ pub.paper }}" target="_blank" rel="noopener">论文</a>{% endif %}
+              {% if pub.pdf %}<a href="{{ pub.pdf }}" target="_blank" rel="noopener">PDF</a>{% endif %}
+              {% if pub.code %}<a href="{{ pub.code }}" target="_blank" rel="noopener">代码</a>{% endif %}
+              {% if pub.dblp %}<a href="{{ pub.dblp }}" target="_blank" rel="noopener">DBLP</a>{% endif %}
+              {% if pub.abstract %}<button type="button" data-publication-toggle="abstract-{{ forloop.index }}" aria-expanded="false">摘要</button>{% endif %}
+              {% if pub.bibtex %}<button type="button" data-publication-toggle="bibtex-{{ forloop.index }}" aria-expanded="false">BibTeX</button>{% endif %}
+            </div>{% endunless %}
+          </div>
+          <div class="publication-framework-wrap">
+            <img class="publication-framework" src="{{ pub.framework_image | default: '/assets/img/publication-placeholder.svg' | relative_url }}" alt="{{ pub.title }} 的方法框架">
+          </div>
+          {% if pub.abstract or pub.bibtex %}<div class="publication-expandable">
+            {% if pub.abstract %}<div id="abstract-{{ forloop.index }}" class="publication-detail-panel" hidden><div class="publication-detail-panel-title">摘要</div><p>{{ pub.abstract }}</p></div>{% endif %}
+            {% if pub.bibtex %}<div id="bibtex-{{ forloop.index }}" class="publication-detail-panel publication-bibtex" hidden><div class="publication-detail-panel-title">BibTeX</div><pre><code>{{ pub.bibtex | escape }}</code></pre></div>{% endif %}
+          </div>{% endif %}
+        </article>
+        {% endfor %}
+      </div>
+      <p class="text-xs text-neutral-500 mt-4">* 通讯作者。</p>
+    </section>
+  </div>
+</main>

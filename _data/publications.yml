@@ -1,0 +1,177 @@
+main:
+- title: 'One Batch Is Enough: A Unified Dataset Condensation Framework for General Time Series Analysis'
+  authors: <strong>Wei Shao</strong>, Ziquan Fang*, Zheqi Lu, Yongfeng Su, Yuzhu Wang, Yunjun Gao
+  venue: ICML 2026
+  homepage: true
+  venue_full: The 43rd International Conference on Machine Learning
+  year: 2026
+  type: Poster
+  tags:
+  - CCF-A
+  - Conference
+  framework_image: /assets/img/UniTSC.png
+  paper: https://icml.cc/virtual/2026/poster/62269
+  code: https://github.com/ZJU-DAILY/UniTSC
+  abstract: Time-series analysis is critical in real-world applications, yet the explosion of time-series data imposes severe burdens on storage and computational resources. Recently, dataset condensation has emerged as a promising data-centric solution by synthesizing compact yet informative datasets to replace large-scale raw data. However, existing methods are largely vision-centric, failing to capture unique temporal properties of time series, or task-specific, tightly coupling the condensed data to a particular downstream objective. As a result, these approaches suffer from feature mismatch and fail to generalize across diverse time-series tasks. To bridge this gap, we propose UniTSC, the first unified dataset condensation framework for general time-series analysis. UniTSC employs a multi-view hybrid encoder to capture task-invariant representations across temporal, spectral, and topological perspectives. Building upon this representation, we design a tri-space alignment paradigm that jointly aligns optimization trajectories, power spectral densities, and multivariate dependency structures, enabling comprehensive information preservation under extreme compression. Extensive experiments show that UniTSC retains up to 97.9% of downstream performance using as little as 0.01% of the original training data, revealing that a single batch-equivalent budget (less than 128 samples) is sufficient to capture the essential dynamics of complex time-series data.
+  bibtex: "@inproceedings{shao2026one,\n  title={One Batch Is Enough: A Unified Dataset Condensation Framework for General Time Series Analysis},\n  author={Shao, Wei and Fang, Ziquan and Lu, Zheqi and Su, Yongfeng and Wang, Yuzhu and Gao, Yunjun},\n  booktitle={Proceedings of the 43rd International Conference on Machine Learning},\n  year={2026},\n  url={https://icml.cc/virtual/2026/poster/62269}\n}"
+  keywords:
+  - Dataset Condensation
+  - Time Series
+  - Multi-Task Learning
+  - Data-Centric AI
+  venue_full_zh: The 43rd International Conference on Machine Learning
+  type_zh: 海报
+  tags_zh:
+  - CCF-A
+  - 会议
+  keywords_zh:
+  - 数据集凝练
+  - 时间序列
+  - 多任务学习
+  - 数据中心人工智能
+- title: 'SHoTClean: Bridging Soft and Hard Constraints for Multivariate Time Series Cleaning'
+  authors: Ziquan Fang*, <strong>Wei Shao</strong>, Zheqi Lu, Lu Chen, Yunjun Gao
+  venue: PACMMOD / SIGMOD 2026
+  homepage: true
+  venue_full: Proceedings of the ACM on Management of Data
+  year: 2026
+  type: Oral
+  tags:
+  - CCF-A
+  - Conference
+  framework_image: /assets/img/SHoTClean.png
+  paper: https://doi.org/10.1145/3786698
+  code: https://github.com/ZJU-DAILY/SHoTClean
+  abstract: Time series data frequently suffer from data quality problems during collection and transmission, such as small-jump dirty points, which existing cleaning methods often fail to detect. Since existing methods primarily address univariate series, their multivariate extensions often fail to capture complex inter-variable dependencies, significantly limiting their effectiveness. To this end, we propose SHoTClean, a family of four algorithms that bridges hard constraints (i.e., physical limits) and soft constraints (i.e., statistical patterns) within a constrained-optimization framework for effective and efficient multivariate time series cleaning. We formulate the cleaning task as minimizing soft-constraint violations while respecting hard-constraint bounds, and develop specialized algorithms for offline batch processing, online streaming, accelerated online cleaning, and causal-enhanced multivariate cleaning. Extensive experiments across 12 real-world datasets demonstrate substantial improvements in accuracy, runtime, and robustness over state-of-the-art baselines.
+  bibtex: "@article{fang2026shotclean,\n  title={SHoTClean: Bridging Soft and Hard Constraints for Multivariate Time Series Cleaning},\n  author={Fang, Ziquan and Shao, Wei and Lu, Zheqi and Chen, Lu and Gao, Yunjun},\n  journal={Proceedings of the ACM on Management of Data},\n  volume={4},\n  number={1},\n  pages={1--27},\n  year={2026},\n  doi={10.1145/3786698}\n}"
+  keywords:
+  - Time Series Cleaning
+  - Data Quality
+  - Constraint Optimization
+  - Causal Discovery
+  venue_full_zh: Proceedings of the ACM on Management of Data
+  type_zh: 口头报告
+  tags_zh:
+  - CCF-A
+  - 会议
+  keywords_zh:
+  - 时间序列清洗
+  - 数据质量
+  - 约束优化
+  - 因果发现
+- title: A Unified Federated Framework for Trajectory Data Preparation via LLMs
+  authors: Zhihao Zeng, Ziquan Fang*, <strong>Wei Shao</strong>, Lu Chen, Yunjun Gao
+  venue: ICLR 2026
+  homepage: false
+  venue_full: The Fourteenth International Conference on Learning Representations
+  year: 2026
+  type: Poster
+  tags:
+  - CCF-A
+  - Conference
+  framework_image: /assets/img/FedTDP.png
+  paper: https://openreview.net/forum?id=MIelckWrEK
+  code: https://github.com/ZJU-DAILY/FedTDP
+  abstract: Trajectory data records the spatio-temporal movements of people and vehicles. However, raw trajectories are often noisy, incomplete, or inconsistent due to sensor errors and transmission failures. To ensure reliable downstream analytics, Trajectory Data Preparation (TDP) has emerged as a critical preprocessing stage, encompassing various tasks such as imputation, map matching, anomaly detection, trajectory recovery, and compression. Existing TDP methods assume centralized access to data and train task-specific models that lack generalization across diverse or unseen tasks. We propose FedTDP for Federated Trajectory Data Preparation, where trajectories are vertically partitioned across regions and cannot be directly shared. FedTDP combines a lightweight Trajectory Privacy AutoEncoder with secret-sharing aggregation, a Trajectory Knowledge Enhancer that adapts language models to spatio-temporal patterns, and Federated Parallel Optimization to reduce communication and training costs. Experiments on six real-world datasets and ten representative tasks show that FedTDP surpasses thirteen state-of-the-art baselines in accuracy, efficiency, and scalability while generalizing effectively across diverse tasks.
+  bibtex: "@inproceedings{zeng2026a,\n  title={A Unified Federated Framework for Trajectory Data Preparation via {LLM}s},\n  author={Zeng, Zhihao and Fang, Ziquan and Shao, Wei and Chen, Lu and Gao, Yunjun},\n  booktitle={The Fourteenth International Conference on Learning Representations},\n  year={2026},\n  url={https://openreview.net/forum?id=MIelckWrEK}\n}"
+  keywords:
+  - Trajectory Data Preparation
+  - Federated Learning
+  - Large Language Models
+  - Privacy Preservation
+  venue_full_zh: The Fourteenth International Conference on Learning Representations
+  type_zh: 海报
+  tags_zh:
+  - CCF-A
+  - 会议
+  keywords_zh:
+  - 轨迹数据准备
+  - 联邦学习
+  - 大语言模型
+  - 隐私保护
+- title: 'Towards Trajectory Anomaly Detection: A Fine-Grained and Noise-Resilient Framework'
+  authors: <strong>Wei Shao</strong>, Ziquan Fang*, Lu Chen, Yunjun Gao
+  venue: KDD 2025
+  homepage: true
+  venue_full: The 31st ACM SIGKDD Conference on Knowledge Discovery and Data Mining
+  year: 2025
+  type: Oral
+  tags:
+  - CCF-A
+  - Conference
+  framework_image: /assets/img/FOTraj.png
+  paper: https://doi.org/10.1145/3711896.3737164
+  code: https://github.com/ZJU-DAILY/FOTraj
+  abstract: Trajectory anomaly detection aims to identify patterns in trajectory data that deviate significantly from normal behavior and plays a crucial role in urban computing. However, real-world trajectories contain diverse anomalies and unavoidable noise. Existing research mainly focuses on coarse-grained anomalies while paying limited attention to fine-grained anomalies and the impact of inherent noise. We propose FOTraj, an LLM-driven approach for fine-grained and noise-resilient trajectory anomaly detection. FOTraj introduces a Spatio-Temporal Dependency Encoder that converts raw trajectories into spatio-temporal graphs, a Patch-Gated Robustification module that simulates noisy environments, and a specialized graph decoder that maps language-model outputs back into graph structures. Extensive experiments on three datasets show that FOTraj outperforms state-of-the-art methods.
+  bibtex: "@inproceedings{shao2025trajectory,\n  title={Towards Trajectory Anomaly Detection: A Fine-Grained and Noise-Resilient Framework},\n  author={Shao, Wei and Fang, Ziquan and Chen, Lu and Gao, Yunjun},\n  booktitle={Proceedings of the 31st ACM SIGKDD Conference on Knowledge Discovery and Data Mining},\n  pages={2490--2501},\n  year={2025},\n  doi={10.1145/3711896.3737164}\n}"
+  keywords:
+  - Trajectory Anomaly Detection
+  - Fine-Grained Anomalies
+  - Noise Robustness
+  - Online Detection
+  venue_full_zh: The 31st ACM SIGKDD Conference on Knowledge Discovery and Data Mining
+  type_zh: 口头报告
+  tags_zh:
+  - CCF-A
+  - 会议
+  keywords_zh:
+  - 轨迹异常检测
+  - 细粒度异常
+  - 抗噪鲁棒性
+  - 在线检测
+- title: 'SALT: Structural Transition-Aware Lossless Compression for Floating-Point Time Series Data Streams'
+  authors: Zheqi Lu, Ziquan Fang*, <strong>Wei Shao</strong>, Yunjun Gao
+  venue: SIGMOD 2027
+  homepage: false
+  venue_full: Under review
+  year: 2027
+  type: Under Review
+  tags:
+  - CCF-A
+  - Conference
+  framework_image: /assets/img/SALT.png
+  code: https://anonymous.4open.science/r/SALT-0DC1
+  abstract: The rapid growth of floating-point time-series data calls for efficient compression techniques to reduce storage costs. However, existing methods fail to fully exploit the structured nature of floating-point representations and the inherent periodicity in time-series data, leading to suboptimal compression performance, especially under structural changes such as exponent shifts. Moreover, they lack native support for efficient CRUD operations on compressed data, incurring substantial overhead due to full decompression. We first introduce a structured representation that explicitly decomposes floating-point values into sign, exponent, precision, and mantissa components, and design structural transitions that capture the evolution between consecutive representations. We then propose SALT, a structural transition-aware lossless compression framework that integrates cost-driven reference selection with an adaptive codebook to jointly model short-term transitions and long-term periodic patterns. We further develop SALT+, which enables efficient Create, Read, Update, and Delete operations over compressed data via a lightweight indexing structure without requiring full decompression. Experiments on 24 real-world datasets against eight state-of-the-art baselines demonstrate superior compression performance, strong robustness, and efficient compressed-state operations with low indexing overhead.
+  keywords:
+  - Floating-Point Time Series
+  - Lossless Compression
+  - Structural Transitions
+  - Compressed-State CRUD
+  venue_full_zh: Under review
+  type_zh: 审稿中
+  tags_zh:
+  - CCF-A
+  - 会议
+  keywords_zh:
+  - 浮点时间序列
+  - 无损压缩
+  - 结构转移
+  - 压缩态增删改查
+- title: 'REACT: A Lightweight Reliability-Aware Framework for Spatio-Temporal Out-of-Distribution Prediction'
+  authors: Yongfeng Su, Ziquan Fang*, Jihua Yang, <strong>Wei Shao</strong>, Yunjun Gao
+  venue: NeurIPS 2026
+  homepage: false
+  venue_full: Under review
+  year: 2026
+  type: Under Review
+  tags:
+  - CCF-A
+  - Conference
+  framework_image: /assets/img/REACT.png
+  code: https://anonymous.4open.science/r/REACT-A82B
+  abstract: In the real world, spatio-temporal forecasting systems inevitably encounter out-of-distribution shifts, where temporal shifts evolve due to seasonal patterns or policy changes, and spatial dependencies shift with sensor deployment, removal, or topology reconfiguration. Existing approaches implicitly assume that the contextual signals supporting prediction remain reliable, but node-level context can become biased or incomplete under temporal and spatial shifts, while fixed graph-based aggregation may amplify corrupted context across nodes. We propose REACT, a lightweight reliability-aware context-calibrated spatio-temporal forecaster that explicitly models and controls context reliability under out-of-distribution conditions. REACT establishes a topology-independent predictive anchor through a graph-free linear encoder, constructs availability-aware context from observed signals and prior-based imputations, and dynamically modulates spatial support through uncertainty-aware gating. Extensive experiments on ten real-world datasets with diverse temporal and structural shifts demonstrate that REACT consistently outperforms eleven baselines, highlighting context reliability as a fundamental principle for robust spatio-temporal forecasting under distribution shift.
+  keywords:
+  - Spatio-Temporal Forecasting
+  - Out-of-Distribution Generalization
+  - Context Reliability
+  - Reliability-Aware Calibration
+  venue_full_zh: Under review
+  type_zh: 审稿中
+  tags_zh:
+  - CCF-A
+  - 会议
+  keywords_zh:
+  - 时空预测
+  - 分布外泛化
+  - 上下文可靠性
+  - 可靠性感知校准

@@ -1,0 +1,62 @@
+{% assign is_zh = false %}{% if page.lang == 'zh-CN' or page.lang == 'zh' %}{% assign is_zh = true %}{% endif %}
+{% if is_zh %}{% assign home_path = '/zh/' %}{% assign publications_path = '/zh/publications/' %}{% else %}{% assign home_path = '/' %}{% assign publications_path = '/publications/' %}{% endif %}
+<!doctype html>
+<html lang="{{ page.lang | default: 'en' }}" class="light scroll-smooth">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="{% if is_zh %}邵伟的个人学术主页，研究方向包括数据中心人工智能、数据挖掘与治理、时间序列分析和大模型预训练数据。{% else %}{{ site.description }}{% endif %}">
+  <meta name="author" content="Wei Shao">
+  <meta name="keywords" content="Wei Shao, 邵伟, Zhejiang University, 浙江大学, Data-Centric AI, Data Mining, Data Governance, Time Series, LLM Data">
+  <meta property="og:title" content="{% if page.title %}{{ page.title }} | {% endif %}{% if is_zh %}邵伟{% else %}Wei Shao{% endif %}">
+  <meta property="og:description" content="{% if is_zh %}邵伟的个人学术主页{% else %}{{ site.description }}{% endif %}">
+  <meta property="og:type" content="website">
+  <title>{% if page.title %}{{ page.title }} | {% endif %}{% if is_zh %}邵伟{% else %}Wei Shao{% endif %}</title>
+  <link rel="alternate" hreflang="en" href="{{ page.en_url | default: '/' | absolute_url }}">
+  <link rel="alternate" hreflang="zh-CN" href="{{ page.zh_url | default: '/zh/' | absolute_url }}">
+  <link rel="alternate" hreflang="x-default" href="{{ page.en_url | default: '/' | absolute_url }}">
+  <link rel="icon" href="{{ '/assets/img/favicon.svg' | relative_url }}" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&family=Noto+Serif+SC:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  <script>(function(){var d=localStorage.getItem('theme');if(d==='dark'||(!d&&matchMedia('(prefers-color-scheme:dark)').matches))document.documentElement.className='dark scroll-smooth';})();</script>
+</head>
+<body class="font-sans antialiased">
+<nav class="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-xl border-b border-neutral-200/60 dark:border-neutral-700/60">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-16 lg:h-20">
+      <a href="{{ home_path | relative_url }}" class="text-xl lg:text-2xl font-serif font-semibold text-primary hover:text-accent transition-colors duration-200">{% if is_zh %}邵伟{% else %}Wei Shao{% endif %}</a>
+      <div class="desktop-nav">
+        <div class="ml-10 flex items-center space-x-6">
+          <div class="flex items-baseline space-x-8">
+            <a href="{{ home_path | relative_url }}" class="nav-link {% if page.nav_active == 'publications' %}text-neutral-600 hover:text-primary{% else %}nav-link-active text-primary{% endif %}"><span class="relative z-10">{% if is_zh %}关于我{% else %}About{% endif %}</span></a>
+            <a href="{{ publications_path | relative_url }}" class="nav-link {% if page.nav_active == 'publications' %}nav-link-active text-primary{% else %}text-neutral-600 hover:text-primary{% endif %}">{% if is_zh %}论文发表{% else %}Publications{% endif %}</a>
+          </div>
+          <div class="flex items-center gap-2 border-l border-neutral-200/80 pl-6 dark:border-neutral-700/80">
+            <div class="language-switch flex rounded-md border border-neutral-200/80 bg-neutral-50/80 text-xs font-semibold dark:border-neutral-600 dark:bg-neutral-800/60">
+              <a href="{{ page.en_url | default: '/' | relative_url }}" class="px-2 py-1 rounded-l-md{% unless is_zh %} bg-accent text-white{% else %} text-neutral-600 dark:text-neutral-300{% endunless %}" lang="en">EN</a>
+              <a href="{{ page.zh_url | default: '/zh/' | relative_url }}" class="px-2 py-1 rounded-r-md border-l border-neutral-200/80 dark:border-neutral-600{% if is_zh %} bg-accent text-white{% else %} text-neutral-600 dark:text-neutral-300{% endif %}" lang="zh-CN">中文</a>
+            </div>
+            <button class="theme-toggle flex items-center justify-center w-10 h-10 rounded-lg border border-neutral-200 dark:border-[rgba(148,163,184,0.24)] bg-background dark:bg-neutral-800" aria-label="{% if is_zh %}切换深色模式{% else %}Toggle theme{% endif %}"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
+          </div>
+        </div>
+      </div>
+      <div class="mobile-controls items-center gap-2">
+        <div class="language-switch flex rounded-md border border-neutral-200/80 bg-neutral-50/80 text-xs font-semibold dark:border-neutral-600 dark:bg-neutral-800/60">
+          <a href="{{ page.en_url | default: '/' | relative_url }}" class="px-2 py-1 rounded-l-md{% unless is_zh %} bg-accent text-white{% else %} text-neutral-600 dark:text-neutral-300{% endunless %}">EN</a>
+          <a href="{{ page.zh_url | default: '/zh/' | relative_url }}" class="px-2 py-1 rounded-r-md border-l border-neutral-200/80 dark:border-neutral-600{% if is_zh %} bg-accent text-white{% else %} text-neutral-600 dark:text-neutral-300{% endif %}">中</a>
+        </div>
+        <button class="theme-toggle flex items-center justify-center w-10 h-10 rounded-lg border border-neutral-200 bg-background dark:bg-neutral-800" aria-label="{% if is_zh %}切换深色模式{% else %}Toggle theme{% endif %}"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
+        <button class="menu-toggle p-2 rounded-md text-neutral-600 hover:text-primary hover:bg-neutral-100 dark:hover:bg-neutral-800" aria-label="{% if is_zh %}打开主菜单{% else %}Open main menu{% endif %}"><svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/></svg></button>
+      </div>
+    </div>
+    <div class="mobile-menu-panel pb-3"><div class="flex flex-col gap-1"><a href="{{ home_path | relative_url }}" class="mobile-nav-link {% if page.nav_active == 'publications' %}text-neutral-600{% else %}nav-link-active text-primary{% endif %}">{% if is_zh %}关于我{% else %}About{% endif %}</a><a href="{{ publications_path | relative_url }}" class="mobile-nav-link {% if page.nav_active == 'publications' %}nav-link-active text-primary{% else %}text-neutral-600{% endif %}">{% if is_zh %}论文发表{% else %}Publications{% endif %}</a></div></div>
+  </div>
+</nav>
+{{ content }}
+<footer class="border-t border-neutral-200/50 bg-neutral-50/50 dark:bg-neutral-900/50 dark:border-neutral-700/50"><div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6 text-center text-sm text-neutral-500"><p>© {{ 'now' | date: '%Y' }} {% if is_zh %}邵伟{% else %}Wei Shao{% endif %}</p><p class="site-updated">{% if is_zh %}最近更新：{{ site.time | date: "%Y-%m-%d" }}{% else %}Last updated: {{ site.time | date: "%B %d, %Y" }}{% endif %}</p><p class="visitor-counter" aria-live="polite">{% if is_zh %}访问量{% else %}Visitors{% endif %}: <span data-visitor-count>—</span></p></div></footer>
+<div class="image-lightbox" data-image-lightbox role="dialog" aria-modal="true" aria-label="{% if is_zh %}论文图片预览{% else %}Publication image preview{% endif %}"><button class="image-lightbox-close" type="button" aria-label="{% if is_zh %}关闭图片预览{% else %}Close image preview{% endif %}">×</button><img src="" alt=""></div>
+<script src="{{ '/assets/js/site.js' | relative_url }}"></script>
+</body>
+</html>

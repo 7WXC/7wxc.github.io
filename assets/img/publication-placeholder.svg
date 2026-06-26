@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+  <title id="title">Publication framework placeholder</title>
+  <desc id="desc">A neutral schematic placeholder to be replaced by a paper framework figure.</desc>
+  <rect width="960" height="540" rx="24" fill="#f8fafc"/>
+  <g fill="none" stroke="#d4a562" stroke-width="8">
+    <rect x="90" y="195" width="180" height="150" rx="20"/><rect x="390" y="140" width="180" height="260" rx="20"/><rect x="690" y="195" width="180" height="150" rx="20"/>
+    <path d="M270 270h105m195 0h105"/><path d="m350 245 25 25-25 25m300-50 25 25-25 25"/>
+  </g>
+  <g fill="#1e293b" font-family="Arial, sans-serif" text-anchor="middle">
+    <text x="180" y="255" font-size="28" font-weight="700">Input</text><text x="180" y="295" font-size="20" fill="#64748b">Data</text>
+    <text x="480" y="245" font-size="28" font-weight="700">Framework</text><text x="480" y="285" font-size="20" fill="#64748b">Replace with</text><text x="480" y="315" font-size="20" fill="#64748b">paper figure</text>
+    <text x="780" y="255" font-size="28" font-weight="700">Output</text><text x="780" y="295" font-size="20" fill="#64748b">Results</text>
+  </g>
+</svg>

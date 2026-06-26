@@ -1,0 +1,25 @@
+name: Wei Shao
+initials: WS
+role: Master's Student
+institution: Zhejiang University
+institution_url: https://www.zju.edu.cn/english/
+email: wei.shao@zju.edu.cn
+cv: /assets/files/CV.pdf
+location: Zhejiang, China
+graduation: Expected June 2027
+interests:
+- Data-Centric AI
+- LLM Pre-training Data
+- Data Mining & Governance
+- Time Series Analysis
+name_zh: 邵伟
+role_zh: 硕士研究生
+institution_zh: 浙江大学
+institution_url_zh: https://www.zju.edu.cn/
+location_zh: 中国浙江
+graduation_zh: 预计 2027 年 6 月
+interests_zh:
+- 数据中心人工智能
+- 大模型预训练数据
+- 数据挖掘与治理
+- 时间序列分析
