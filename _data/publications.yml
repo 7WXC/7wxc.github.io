@@ -121,7 +121,7 @@ main:
   - 在线检测
 - title: 'SALT: Structural Transition-Aware Lossless Compression for Floating-Point Time Series Data Streams'
   authors: Zheqi Lu, Ziquan Fang*, <strong>Wei Shao</strong>, Yunjun Gao
-  venue: SIGMOD 2027
+  venue: VLDB 2027
   homepage: false
   venue_full: Under review
   year: 2027
