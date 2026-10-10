@@ -119,6 +119,35 @@ main:
   - 细粒度异常
   - 抗噪鲁棒性
   - 在线检测
+- title: 'REACT: A Lightweight Reliability-Aware Framework for Spatio-Temporal Out-of-Distribution Prediction'
+  authors: Yongfeng Su, Ziquan Fang*, Jihua Yang, <strong>Wei Shao</strong>, Yunjun Gao
+  venue: NeurIPS 2026
+  homepage: false
+  venue_full: Conference on Neural Information Processing Systems
+  year: 2026
+  type: Poster
+  tags:
+  - CCF-A
+  - Conference
+  framework_image: /assets/img/REACT.png
+  paper: https://neurips.cc/virtual/2026/loc/sydney/poster/152742
+  code: https://anonymous.4open.science/r/REACT-A82B
+  abstract: In the real world, spatio-temporal forecasting systems inevitably encounter out-of-distribution shifts, where temporal shifts evolve due to seasonal patterns or policy changes, and spatial dependencies shift with sensor deployment, removal, or topology reconfiguration. Existing approaches implicitly assume that the contextual signals supporting prediction remain reliable, but node-level context can become biased or incomplete under temporal and spatial shifts, while fixed graph-based aggregation may amplify corrupted context across nodes. We propose REACT, a lightweight reliability-aware context-calibrated spatio-temporal forecaster that explicitly models and controls context reliability under out-of-distribution conditions. REACT establishes a topology-independent predictive anchor through a graph-free linear encoder, constructs availability-aware context from observed signals and prior-based imputations, and dynamically modulates spatial support through uncertainty-aware gating. Extensive experiments on ten real-world datasets with diverse temporal and structural shifts demonstrate that REACT consistently outperforms eleven baselines, highlighting context reliability as a fundamental principle for robust spatio-temporal forecasting under distribution shift.
+  keywords:
+  - Spatio-Temporal Forecasting
+  - Out-of-Distribution Generalization
+  - Context Reliability
+  - Reliability-Aware Calibration
+  venue_full_zh: Conference on Neural Information Processing Systems
+  type_zh: 海报
+  tags_zh:
+  - CCF-A
+  - 会议
+  keywords_zh:
+  - 时空预测
+  - 分布外泛化
+  - 上下文可靠性
+  - 可靠性感知校准
 - title: 'SALT: Structural Transition-Aware Lossless Compression for Floating-Point Time Series Data Streams'
   authors: Zheqi Lu, Ziquan Fang*, <strong>Wei Shao</strong>, Yunjun Gao
   venue: VLDB 2027
@@ -147,31 +176,3 @@ main:
   - 无损压缩
   - 结构转移
   - 压缩态增删改查
-- title: 'REACT: A Lightweight Reliability-Aware Framework for Spatio-Temporal Out-of-Distribution Prediction'
-  authors: Yongfeng Su, Ziquan Fang*, Jihua Yang, <strong>Wei Shao</strong>, Yunjun Gao
-  venue: NeurIPS 2026
-  homepage: false
-  venue_full: Under review
-  year: 2026
-  type: Under Review
-  tags:
-  - CCF-A
-  - Conference
-  framework_image: /assets/img/REACT.png
-  code: https://anonymous.4open.science/r/REACT-A82B
-  abstract: In the real world, spatio-temporal forecasting systems inevitably encounter out-of-distribution shifts, where temporal shifts evolve due to seasonal patterns or policy changes, and spatial dependencies shift with sensor deployment, removal, or topology reconfiguration. Existing approaches implicitly assume that the contextual signals supporting prediction remain reliable, but node-level context can become biased or incomplete under temporal and spatial shifts, while fixed graph-based aggregation may amplify corrupted context across nodes. We propose REACT, a lightweight reliability-aware context-calibrated spatio-temporal forecaster that explicitly models and controls context reliability under out-of-distribution conditions. REACT establishes a topology-independent predictive anchor through a graph-free linear encoder, constructs availability-aware context from observed signals and prior-based imputations, and dynamically modulates spatial support through uncertainty-aware gating. Extensive experiments on ten real-world datasets with diverse temporal and structural shifts demonstrate that REACT consistently outperforms eleven baselines, highlighting context reliability as a fundamental principle for robust spatio-temporal forecasting under distribution shift.
-  keywords:
-  - Spatio-Temporal Forecasting
-  - Out-of-Distribution Generalization
-  - Context Reliability
-  - Reliability-Aware Calibration
-  venue_full_zh: Under review
-  type_zh: 审稿中
-  tags_zh:
-  - CCF-A
-  - 会议
-  keywords_zh:
-  - 时空预测
-  - 分布外泛化
-  - 上下文可靠性
-  - 可靠性感知校准
