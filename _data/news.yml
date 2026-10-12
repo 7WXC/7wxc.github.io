@@ -1,6 +1,6 @@
 - date: 2026-10
-  text: I received the <strong>National Scholarship</strong>! 🎉
-  text_zh: 我获得了<strong>国家奖学金</strong>！🎉
+  text: I received the <strong>National Scholarship</strong> again! 🎉
+  text_zh: 我再次获得了<strong>国家奖学金</strong>！🎉
 - date: 2026-09
   text: Our paper <strong>REACT</strong> was accepted to <strong>NeurIPS 2026</strong>! 🎉
   text_zh: 我们的论文 <strong>REACT</strong> 被 <strong>NeurIPS 2026</strong> 接收！🎉
@@ -22,6 +22,9 @@
 - date: 2025-12
   text: Our paper <strong>SHoTClean</strong> was accepted to <strong>SIGMOD 2026</strong>! 🎉
   text_zh: 我们的论文 <strong>SHoTClean</strong> 被 <strong>SIGMOD 2026</strong> 接收！🎉
+- date: 2025-10
+  text: I received the <strong>National Scholarship</strong>! 🎉
+  text_zh: 我获得了<strong>国家奖学金</strong>！🎉
 - date: 2025-08
   text: I gave an oral presentation on our work <strong>FOTraj</strong> at <strong>KDD 2025</strong> in Toronto!
   text_zh: 我在多伦多举行的 <strong>KDD 2025</strong> 上对我们的工作 <strong>FOTraj</strong> 进行了口头报告！
